@@ -188,10 +188,11 @@ int main(int argc, char **argv) {
         long int success = complete - errors.status;
         long double rate = success / runtime_s;
         printf("  Non-2xx or 3xx responses: %d\n", errors.status);
+        printf("  Complete requests       : %ld\n", complete);
         printf("  Success responses       : %ld\n", success);
         printf("  Success rate (req/s)    : %-9.2Lf\n", rate);
     // }
-    printf("============================================\n");
+    printf("============================================\n\n");
 
     printf("Requests/sec: %9.2Lf\n", req_per_s);
     printf("Transfer/sec: %10sB\n", format_binary(bytes_per_s));
