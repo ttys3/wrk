@@ -1,3 +1,30 @@
+# what's the difference bewteen the wg/wrk repo?
+
+this one added a summary success rate in the result, mainly for test server side ratelimit feature.
+
+the demo output like this:
+
+```shell
+Running 10s test @ https://example.com/xxx
+  4 threads and 1000 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   289.42ms  373.55ms   2.00s    85.50%
+    Req/Sec   659.25    191.26     1.46k    80.15%
+  26198 requests in 10.09s, 11.49MB read
+  Socket errors: connect 0, read 0, write 0, timeout 437
+
+============================================
+  Non-2xx or 3xx responses: 26167
+  Complete requests       : 26198
+  Success responses       : 31
+  Success rate (req/s)    : 3.07
+============================================
+
+Requests/sec:   2595.77
+Transfer/sec:      1.14MB
+```
+
+
 # wrk - a HTTP benchmarking tool
 
   wrk is a modern HTTP benchmarking tool capable of generating significant
